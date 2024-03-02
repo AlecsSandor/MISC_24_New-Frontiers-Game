@@ -1,0 +1,28 @@
+[gd_scene load_steps=8 format=3 uid="uid://djtqhss66ddps"]
+
+[ext_resource type="Material" uid="uid://dv4mvle53fwlh" path="res://materials/house_window.tres" id="3_g7xe4"]
+[ext_resource type="Material" uid="uid://y16647llesnh" path="res://materials/house_roof.tres" id="4_mmuwf"]
+[ext_resource type="Material" uid="uid://ocldnrvtwp0f" path="res://materials/grassFloor.tres" id="5_0a753"]
+[ext_resource type="ArrayMesh" uid="uid://b1op3j1x74qem" path="res://models/irishHouse3.obj" id="6_muj6l"]
+[ext_resource type="PackedScene" uid="uid://bq3rauxjlsbj" path="res://scenes/FactionFlag.tscn" id="6_nrpxg"]
+[ext_resource type="Material" uid="uid://ct4qay4vg1wiw" path="res://materials/buildings_wall.tres" id="7_kxagm"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1w3nl"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.16031, 0, 5.10024, 0, 15, 0, -5.10024, 0, 3.16031, 0, 0.0599316, 0)
+mesh = SubResource("PlaneMesh_1w3nl")
+surface_material_override/0 = ExtResource("5_0a753")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9, 0, 0, 0, 0.879019, 0, 0, 0, 0.776095, -0.509257, 0, -1.01768)
+mesh = ExtResource("6_muj6l")
+surface_material_override/0 = ExtResource("4_mmuwf")
+surface_material_override/1 = ExtResource("7_kxagm")
+surface_material_override/2 = ExtResource("3_g7xe4")
+surface_material_override/3 = ExtResource("7_kxagm")
+
+[node name="Flag" parent="." instance=ExtResource("6_nrpxg")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 3.17105, 0, -2.11477)

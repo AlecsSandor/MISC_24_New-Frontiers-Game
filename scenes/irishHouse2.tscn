@@ -1,0 +1,38 @@
+[gd_scene load_steps=10 format=3 uid="uid://gplqjvv45q8m"]
+
+[ext_resource type="ArrayMesh" uid="uid://bmu33c5n67n6c" path="res://models/irishHouse.obj" id="1_5ofdk"]
+[ext_resource type="Material" uid="uid://caqirrdpj6nlh" path="res://materials/house_wall.tres" id="2_ntsk5"]
+[ext_resource type="Material" uid="uid://dv4mvle53fwlh" path="res://materials/house_window.tres" id="3_jh3bu"]
+[ext_resource type="Material" uid="uid://y16647llesnh" path="res://materials/house_roof.tres" id="4_p28ij"]
+[ext_resource type="Material" uid="uid://ocldnrvtwp0f" path="res://materials/grassFloor.tres" id="4_wqpn4"]
+[ext_resource type="ArrayMesh" uid="uid://dyrdyibubb0xk" path="res://models/irishHouse2.obj" id="5_cg7eo"]
+[ext_resource type="Material" uid="uid://ct4qay4vg1wiw" path="res://materials/buildings_wall.tres" id="7_ycsur"]
+[ext_resource type="PackedScene" uid="uid://bq3rauxjlsbj" path="res://scenes/FactionFlag.tscn" id="8_cay61"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1w3nl"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.56, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+visible = false
+mesh = ExtResource("1_5ofdk")
+surface_material_override/0 = ExtResource("2_ntsk5")
+surface_material_override/1 = ExtResource("3_jh3bu")
+surface_material_override/2 = ExtResource("4_p28ij")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.16031, 0, 5.10024, 0, 15, 0, -5.10024, 0, 3.16031, 0, 0.0599316, 0)
+mesh = SubResource("PlaneMesh_1w3nl")
+surface_material_override/0 = ExtResource("4_wqpn4")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.526096, 0, -0.849849)
+mesh = ExtResource("5_cg7eo")
+surface_material_override/0 = ExtResource("4_p28ij")
+surface_material_override/1 = ExtResource("7_ycsur")
+surface_material_override/2 = ExtResource("3_jh3bu")
+surface_material_override/3 = ExtResource("7_ycsur")
+
+[node name="Flag" parent="." instance=ExtResource("8_cay61")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -3.42237, 1.09204, -1.35116)

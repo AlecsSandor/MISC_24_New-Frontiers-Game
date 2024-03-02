@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://cacet36qo36s2"]
+
+[ext_resource type="ArrayMesh" uid="uid://d2wcihntgagt5" path="res://models/nativeTent.obj" id="1_wnk7b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tadhm"]
+albedo_color = Color(0.498039, 0.317647, 0.164706, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ptl3v"]
+albedo_color = Color(0.870588, 0.827451, 0.792157, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u5oev"]
+albedo_color = Color(0.733333, 0.270588, 0.258824, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nn647"]
+albedo_color = Color(0.733333, 0.270588, 0.258824, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jryat"]
+size = Vector3(9, 5, 9)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.160707, 0, -0.288224, 0, 0.33, 0, 0.288224, 0, 0.160707, 2.90082, 0, -0.936121)
+mesh = ExtResource("1_wnk7b")
+surface_material_override/0 = SubResource("StandardMaterial3D_tadhm")
+surface_material_override/1 = SubResource("StandardMaterial3D_ptl3v")
+surface_material_override/2 = SubResource("StandardMaterial3D_u5oev")
+surface_material_override/3 = SubResource("StandardMaterial3D_nn647")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, -1.73356, 0, -2.32297)
+mesh = ExtResource("1_wnk7b")
+surface_material_override/0 = SubResource("StandardMaterial3D_tadhm")
+surface_material_override/1 = SubResource("StandardMaterial3D_ptl3v")
+surface_material_override/2 = SubResource("StandardMaterial3D_u5oev")
+surface_material_override/3 = SubResource("StandardMaterial3D_nn647")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.0638374, 0, 0.323767, 0, 0.33, 0, -0.323767, 0, -0.0638374, -2.98172, 0, 1.61799)
+mesh = ExtResource("1_wnk7b")
+surface_material_override/0 = SubResource("StandardMaterial3D_tadhm")
+surface_material_override/1 = SubResource("StandardMaterial3D_ptl3v")
+surface_material_override/2 = SubResource("StandardMaterial3D_u5oev")
+surface_material_override/3 = SubResource("StandardMaterial3D_nn647")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+visible = false
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.47383, 0)
+shape = SubResource("BoxShape3D_jryat")

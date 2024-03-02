@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c210eokhrixbw"]
+
+[ext_resource type="Texture2D" uid="uid://dqr4212fp1ut3" path="res://textures/water_pattern_normal.jpg" id="1_xtl06"]
+
+[resource]
+transparency = 1
+albedo_color = Color(0.129412, 0.364706, 0.411765, 0.796078)
+metallic_specular = 0.81
+roughness = 0.02
+normal_enabled = true
+normal_scale = 0.3
+normal_texture = ExtResource("1_xtl06")
+uv1_scale = Vector3(3, 3, 3)

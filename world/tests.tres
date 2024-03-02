@@ -1,0 +1,22 @@
+[gd_resource type="Environment" load_steps=3 format=3 uid="uid://cu12melhrayn"]
+
+[sub_resource type="Gradient" id="Gradient_mf228"]
+offsets = PackedFloat32Array(0.280083, 1)
+colors = PackedColorArray(0.163455, 0.169821, 0.180339, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_fpwth"]
+gradient = SubResource("Gradient_mf228")
+
+[resource]
+background_mode = 1
+background_color = Color(0.521569, 0.576471, 0.607843, 1)
+ambient_light_color = Color(0.380392, 0.380392, 0.380392, 1)
+tonemap_mode = 2
+fog_enabled = true
+fog_light_color = Color(0.521569, 0.576471, 0.607843, 1)
+fog_light_energy = 2.0
+fog_density = 0.002
+fog_height = -4.0
+fog_height_density = 0.16
+adjustment_enabled = true
+adjustment_color_correction = SubResource("GradientTexture1D_fpwth")

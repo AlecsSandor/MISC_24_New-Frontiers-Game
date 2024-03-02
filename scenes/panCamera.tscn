@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://jgwa6grkhf2p"]
+
+[ext_resource type="Script" path="res://scripts/panCamera.gd" id="1_ofsvb"]
+[ext_resource type="Script" path="res://scripts/panCameraCamera.gd" id="2_t0vvr"]
+
+[node name="CameraGimbal" type="Node3D"]
+script = ExtResource("1_ofsvb")
+
+[node name="InnerGimbal" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.893301, 0.449459, 0, -0.449459, 0.893301, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="InnerGimbal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.86152, 102.098)
+current = true
+fov = 45.0
+script = ExtResource("2_t0vvr")

@@ -1,0 +1,35 @@
+[gd_scene load_steps=10 format=3 uid="uid://cff6tq0u66uho"]
+
+[ext_resource type="PackedScene" uid="uid://ypop36pp4wkc" path="res://scenes/luca.glb" id="1_phxwe"]
+[ext_resource type="Material" uid="uid://dnilpqgncpehh" path="res://materials/outlineShaderMaterial.tres" id="2_getth"]
+[ext_resource type="Material" uid="uid://c20ts8rq0q418" path="res://materials/Character_skin.tres" id="3_ok5mv"]
+[ext_resource type="Material" uid="uid://cvf21hwsbaww0" path="res://materials/Character_boots.tres" id="4_uloas"]
+[ext_resource type="Material" uid="uid://d2p7f3n7v2n1f" path="res://materials/Character_pants.tres" id="5_cxq3i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q7n7r"]
+next_pass = ExtResource("2_getth")
+specular_mode = 1
+albedo_color = Color(0.341176, 0.203922, 0.0745098, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vabry"]
+specular_mode = 1
+albedo_color = Color(0.176471, 0.105882, 0.0235294, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xapvt"]
+specular_mode = 1
+albedo_color = Color(0.764706, 0.764706, 0.764706, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hroy2"]
+specular_mode = 1
+albedo_color = Color(0.0705882, 0.0705882, 0.0705882, 1)
+
+[node name="luca" instance=ExtResource("1_phxwe")]
+
+[node name="LucaaGeo" parent="Luca/Skeleton3D" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_q7n7r")
+surface_material_override/1 = SubResource("StandardMaterial3D_vabry")
+surface_material_override/2 = ExtResource("3_ok5mv")
+surface_material_override/3 = ExtResource("4_uloas")
+surface_material_override/4 = ExtResource("5_cxq3i")
+surface_material_override/5 = SubResource("StandardMaterial3D_xapvt")
+surface_material_override/6 = SubResource("StandardMaterial3D_hroy2")

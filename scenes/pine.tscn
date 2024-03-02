@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://dvcck51wv2d1u"]
+
+[ext_resource type="Script" path="res://scripts/pine.gd" id="1_546bt"]
+[ext_resource type="ArrayMesh" uid="uid://bvit7g6ihqk3d" path="res://models/Pine.obj" id="1_aoys0"]
+[ext_resource type="Material" uid="uid://ocldnrvtwp0f" path="res://materials/grassFloor.tres" id="3_ongcm"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_uk83x"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p64um"]
+size = Vector3(0.7, 8, 0.7)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_546bt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_aoys0")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.01, 0)
+mesh = SubResource("PlaneMesh_uk83x")
+surface_material_override/0 = ExtResource("3_ongcm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.91446, 0)
+shape = SubResource("BoxShape3D_p64um")

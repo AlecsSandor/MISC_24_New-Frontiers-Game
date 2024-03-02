@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://trhjfkt4e786"]
+
+[ext_resource type="Texture2D" uid="uid://ddomwniisx2da" path="res://textures/grass_squared_07_mobile.jpg" id="1_y0ov4"]
+[ext_resource type="Material" uid="uid://dnilpqgncpehh" path="res://materials/outlineShaderMaterial.tres" id="2_cthmf"]
+
+[resource]
+next_pass = ExtResource("2_cthmf")
+shading_mode = 0
+specular_mode = 1
+albedo_color = Color(0.839216, 0.898039, 0.898039, 1)
+albedo_texture = ExtResource("1_y0ov4")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://0cml2a7520q3"]
+
+[ext_resource type="ArrayMesh" uid="uid://c2fgsyr8wftyw" path="res://models/MountainSquare.obj" id="1_l6l51"]
+[ext_resource type="Texture2D" uid="uid://5kqqgyxbip2h" path="res://textures/grass_squared.jpg" id="2_88er3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0b41s"]
+albedo_color = Color(0.619608, 0.384314, 0.345098, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ii7ix"]
+albedo_texture = ExtResource("2_88er3")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_l6l51")
+surface_material_override/0 = SubResource("StandardMaterial3D_0b41s")
+surface_material_override/1 = SubResource("StandardMaterial3D_ii7ix")

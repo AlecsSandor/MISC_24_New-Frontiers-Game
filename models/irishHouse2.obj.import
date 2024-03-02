@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dyrdyibubb0xk"
+path="res://.godot/imported/irishHouse2.obj-2751992784a8df47d8f9da7f093e7600.mesh"
+
+[deps]
+
+files=["res://.godot/imported/irishHouse2.obj-2751992784a8df47d8f9da7f093e7600.mesh"]
+
+source_file="res://models/irishHouse2.obj"
+dest_files=["res://.godot/imported/irishHouse2.obj-2751992784a8df47d8f9da7f093e7600.mesh", "res://.godot/imported/irishHouse2.obj-2751992784a8df47d8f9da7f093e7600.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

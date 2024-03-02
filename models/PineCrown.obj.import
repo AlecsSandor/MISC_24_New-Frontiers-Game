@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bml4hisn6pwhy"
+path="res://.godot/imported/PineCrown.obj-efb5952a45097652bb1fcc5eb7d56f01.mesh"
+
+[deps]
+
+files=["res://.godot/imported/PineCrown.obj-efb5952a45097652bb1fcc5eb7d56f01.mesh"]
+
+source_file="res://models/PineCrown.obj"
+dest_files=["res://.godot/imported/PineCrown.obj-efb5952a45097652bb1fcc5eb7d56f01.mesh", "res://.godot/imported/PineCrown.obj-efb5952a45097652bb1fcc5eb7d56f01.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

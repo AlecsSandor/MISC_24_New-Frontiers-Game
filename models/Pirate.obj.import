@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ukfbq407jmcp"
+path="res://.godot/imported/Pirate.obj-ba2779b9d145b9998bc9cadaeba0615b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Pirate.obj-ba2779b9d145b9998bc9cadaeba0615b.mesh"]
+
+source_file="res://models/Pirate.obj"
+dest_files=["res://.godot/imported/Pirate.obj-ba2779b9d145b9998bc9cadaeba0615b.mesh", "res://.godot/imported/Pirate.obj-ba2779b9d145b9998bc9cadaeba0615b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

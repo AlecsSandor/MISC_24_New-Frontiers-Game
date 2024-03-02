@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://d2p7f3n7v2n1f"]
+
+[ext_resource type="Material" uid="uid://dnilpqgncpehh" path="res://materials/outlineShaderMaterial.tres" id="1_sw1py"]
+
+[resource]
+next_pass = ExtResource("1_sw1py")
+shading_mode = 0
+specular_mode = 1
+albedo_color = Color(0.607843, 0.498039, 0.258824, 1)

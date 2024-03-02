@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://daifsnq07wlfr"]
+
+[ext_resource type="Shader" path="res://shaders/water.gdshader" id="1_cbyx2"]
+[ext_resource type="Texture2D" uid="uid://dqr4212fp1ut3" path="res://textures/water_pattern_normal.jpg" id="2_4gdkj"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_cbyx2")
+shader_parameter/metallic = 0.108
+shader_parameter/roughness = 0.621
+shader_parameter/main_color = Color(0.152941, 0.439216, 0.490196, 1)
+shader_parameter/intersection_color = Color(0.658824, 0.870588, 0.894118, 1)
+shader_parameter/intersection_max_threshold = 0.5
+shader_parameter/displ_amount = 0.3
+shader_parameter/near = 1.0
+shader_parameter/far = 140.0
+shader_parameter/displ_tex = ExtResource("2_4gdkj")

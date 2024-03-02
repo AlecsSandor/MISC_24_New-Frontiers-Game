@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bbj5bd3dhhtwp"
+path="res://.godot/imported/simple_pine.obj-02c1cb547ae083614c7a1399430b3185.mesh"
+
+[deps]
+
+files=["res://.godot/imported/simple_pine.obj-02c1cb547ae083614c7a1399430b3185.mesh"]
+
+source_file="res://models/simple_pine.obj"
+dest_files=["res://.godot/imported/simple_pine.obj-02c1cb547ae083614c7a1399430b3185.mesh", "res://.godot/imported/simple_pine.obj-02c1cb547ae083614c7a1399430b3185.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

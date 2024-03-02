@@ -1,0 +1,25 @@
+[gd_scene load_steps=7 format=3 uid="uid://bq3rauxjlsbj"]
+
+[ext_resource type="PackedScene" uid="uid://ctvla2pqavxow" path="res://scenes/Flag.glb" id="1_nrayp"]
+[ext_resource type="Script" path="res://scripts/FactionFlag.gd" id="2_3elff"]
+[ext_resource type="Material" uid="uid://cvf21hwsbaww0" path="res://materials/Character_boots.tres" id="2_26j6m"]
+[ext_resource type="Texture2D" uid="uid://bacbd7dij7gj6" path="res://textures/Group 1.jpg" id="3_monmu"]
+[ext_resource type="Material" uid="uid://dnilpqgncpehh" path="res://materials/outlineShaderMaterial.tres" id="4_kg2up"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bgnk7"]
+next_pass = ExtResource("4_kg2up")
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("3_monmu")
+
+[node name="Flag" instance=ExtResource("1_nrayp")]
+script = ExtResource("2_3elff")
+
+[node name="Cube_013" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_26j6m")
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/2/rotation = Quaternion(-0.00199355, 8.24986e-06, 2.58607e-07, 0.999998)
+
+[node name="Plane_002" parent="Armature/Skeleton3D" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_bgnk7")

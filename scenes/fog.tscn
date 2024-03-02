@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1s42borpqx5q"]
+
+[sub_resource type="Environment" id="Environment_3i1x1"]
+volumetric_fog_enabled = true
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_3i1x1")
+
+[node name="FogVolume" type="FogVolume" parent="."]

@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://c1mqim12g6lyc"]
+
+[ext_resource type="Material" uid="uid://dnilpqgncpehh" path="res://materials/outlineShaderMaterial.tres" id="1_5yimt"]
+[ext_resource type="Shader" path="res://shaders/walls.gdshader" id="1_x1twp"]
+
+[resource]
+render_priority = 0
+next_pass = ExtResource("1_5yimt")
+shader = ExtResource("1_x1twp")
+shader_parameter/first_color = Color(0.870588, 0.870588, 0.870588, 1)
+shader_parameter/second_color = Color(0, 0, 0, 1)
+shader_parameter/position = -0.065
+shader_parameter/size = 0.601
+shader_parameter/angle = 182.046

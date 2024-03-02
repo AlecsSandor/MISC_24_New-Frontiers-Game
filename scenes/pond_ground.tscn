@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddsmjbjhiiu0f"]
+
+[ext_resource type="ArrayMesh" uid="uid://bnppxhsvaeyas" path="res://models/pond_ground.obj" id="1_ayvf1"]
+[ext_resource type="Material" uid="uid://trhjfkt4e786" path="res://materials/ground_grass.tres" id="2_kdol3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6spag"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_w315x"]
+size = Vector2(12, 12)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(7, 0, 0, 0, 16, 0, 0, 0, 7, 0, 0, 0)
+mesh = ExtResource("1_ayvf1")
+surface_material_override/0 = ExtResource("2_kdol3")
+surface_material_override/1 = SubResource("StandardMaterial3D_6spag")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0985789, 0)
+mesh = SubResource("PlaneMesh_w315x")

@@ -1,0 +1,38 @@
+[gd_scene load_steps=10 format=3 uid="uid://6bn7ngvtud77"]
+
+[ext_resource type="PackedScene" uid="uid://d1jlnujml64gr" path="res://scenes/luca_rifle.glb" id="1_lbybr"]
+[ext_resource type="Material" uid="uid://dnilpqgncpehh" path="res://materials/outlineShaderMaterial.tres" id="2_mlxsd"]
+[ext_resource type="Material" uid="uid://cw46kkbl0bm48" path="res://materials/Character_hat.tres" id="3_y0y7j"]
+[ext_resource type="Material" uid="uid://dcwg0tcuj18ii" path="res://materials/Character_hatStrip.tres" id="4_4bfs2"]
+[ext_resource type="Material" uid="uid://c20ts8rq0q418" path="res://materials/Character_skin.tres" id="5_aixde"]
+[ext_resource type="Material" uid="uid://cvf21hwsbaww0" path="res://materials/Character_boots.tres" id="6_y4dbr"]
+[ext_resource type="Material" uid="uid://d2p7f3n7v2n1f" path="res://materials/Character_pants.tres" id="7_yn20k"]
+[ext_resource type="Material" uid="uid://csbb5e3pe3egu" path="res://materials/Character_beard.tres" id="8_yri11"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uu80m"]
+next_pass = ExtResource("2_mlxsd")
+albedo_color = Color(0.65098, 0.65098, 0.65098, 1)
+
+[node name="luca_04" instance=ExtResource("1_lbybr")]
+
+[node name="Skeleton3D" parent="Luca" index="0"]
+bones/0/rotation = Quaternion(0.041652, -0.430603, 0.0130485, 0.901486)
+bones/1/rotation = Quaternion(-0.112818, 0.00538832, 0.0109778, 0.99354)
+bones/3/rotation = Quaternion(0.191382, -0.00516294, -0.814316, 0.547938)
+bones/4/rotation = Quaternion(0.273979, 0.174118, -0.42868, 0.84312)
+bones/5/rotation = Quaternion(0.611685, -0.0874192, 0.107652, 0.778852)
+bones/7/rotation = Quaternion(0.302681, 0.395985, 0.339161, 0.797841)
+bones/8/rotation = Quaternion(0.292099, 0.0573717, 0.370172, 0.879977)
+
+[node name="Gun" parent="Luca/Skeleton3D" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_uu80m")
+surface_material_override/1 = ExtResource("3_y0y7j")
+
+[node name="LucaaGeo" parent="Luca/Skeleton3D" index="1"]
+surface_material_override/0 = ExtResource("3_y0y7j")
+surface_material_override/1 = ExtResource("4_4bfs2")
+surface_material_override/2 = ExtResource("5_aixde")
+surface_material_override/3 = ExtResource("6_y4dbr")
+surface_material_override/4 = ExtResource("7_yn20k")
+surface_material_override/5 = ExtResource("8_yri11")
+surface_material_override/6 = ExtResource("6_y4dbr")

@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://dy6w6rbdstaac"]
+
+[ext_resource type="ArrayMesh" uid="uid://drhym0sx5sbrt" path="res://models/wall_single_01.obj" id="1_gxqga"]
+[ext_resource type="Material" uid="uid://c1mqim12g6lyc" path="res://materials/walls.tres" id="3_iswaa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vrx7m"]
+size = Vector3(0.7, 1.5, 14)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.59, 0, 0, 0, 0.59, 0, 0, 0, 0.59, 0, 0, 6.691)
+mesh = ExtResource("1_gxqga")
+surface_material_override/0 = ExtResource("3_iswaa")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.46954e-08, 0, -0.59, 0, 0.59, 0, 0.564965, 0, -2.57897e-08, -6.691, 0, -0.307117)
+mesh = ExtResource("1_gxqga")
+surface_material_override/0 = ExtResource("3_iswaa")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.72382, 0.702172, 0.0527463)
+shape = SubResource("BoxShape3D_vrx7m")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0363283, 0.702172, 6.64235)
+shape = SubResource("BoxShape3D_vrx7m")

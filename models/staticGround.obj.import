@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://roihh65bq7lx"
+path="res://.godot/imported/staticGround.obj-287b5f971ade44b52bc6a515a942b44f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/staticGround.obj-287b5f971ade44b52bc6a515a942b44f.mesh"]
+
+source_file="res://models/staticGround.obj"
+dest_files=["res://.godot/imported/staticGround.obj-287b5f971ade44b52bc6a515a942b44f.mesh", "res://.godot/imported/staticGround.obj-287b5f971ade44b52bc6a515a942b44f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

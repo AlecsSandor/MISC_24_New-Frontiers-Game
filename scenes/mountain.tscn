@@ -1,0 +1,38 @@
+[gd_scene load_steps=9 format=3 uid="uid://bw8fxf38bhoy4"]
+
+[ext_resource type="Script" path="res://scripts/mountain.gd" id="1_bwfv8"]
+[ext_resource type="ArrayMesh" uid="uid://burel7ye2qbkr" path="res://models/Mountain.obj" id="1_gg73o"]
+[ext_resource type="Texture2D" uid="uid://b07inlh7nf800" path="res://textures/grass 7.28grass.jpg" id="2_03ery"]
+[ext_resource type="Material" uid="uid://bl7ea8c26m6rh" path="res://materials/mountain.tres" id="3_al8vg"]
+[ext_resource type="Material" uid="uid://ocldnrvtwp0f" path="res://materials/grassFloor.tres" id="3_n6pbe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gpphb"]
+albedo_color = Color(0.572549, 0.882353, 0.937255, 1)
+albedo_texture = ExtResource("2_03ery")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_8tqau"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hx2gn"]
+size = Vector3(1, 2.5, 1)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_bwfv8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_gg73o")
+surface_material_override/0 = ExtResource("3_al8vg")
+surface_material_override/1 = SubResource("StandardMaterial3D_gpphb")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.7, 0, 0, 0, 2.429, 0, 0, 0, 1.7, 0, 0.01, 0)
+mesh = SubResource("PlaneMesh_8tqau")
+surface_material_override/0 = ExtResource("3_n6pbe")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0201397, 1.20685, 0)
+shape = SubResource("BoxShape3D_hx2gn")
+
+[connection signal="mouse_entered" from="StaticBody3D" to="." method="_on_static_body_3d_mouse_entered"]
+[connection signal="mouse_exited" from="StaticBody3D" to="." method="_on_static_body_3d_mouse_exited"]

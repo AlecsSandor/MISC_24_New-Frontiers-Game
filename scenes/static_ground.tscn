@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2inhghriotqy"]
+
+[ext_resource type="ArrayMesh" uid="uid://roihh65bq7lx" path="res://models/staticGround.obj" id="1_lr5kt"]
+[ext_resource type="Material" uid="uid://trhjfkt4e786" path="res://materials/ground_grass.tres" id="2_2m4oe"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5v62l"]
+size = Vector3(14, 20, 14)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0a76k"]
+specular_mode = 1
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10.0062, 0)
+visible = false
+mesh = SubResource("BoxMesh_5v62l")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(7, 0, 0, 0, 16, 0, 0, 0, 7, 0, -0.01, 0)
+mesh = ExtResource("1_lr5kt")
+surface_material_override/0 = ExtResource("2_2m4oe")
+surface_material_override/1 = SubResource("StandardMaterial3D_0a76k")

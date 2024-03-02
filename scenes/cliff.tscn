@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://1cjt2bnnco8f"]
+
+[ext_resource type="ArrayMesh" uid="uid://hx1ikk3l3gqm" path="res://models/Cliff_.obj" id="1_w8c0p"]
+[ext_resource type="Texture2D" uid="uid://dgdt7ux6jhmox" path="res://textures/group2.jpg" id="2_sqpku"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ti6k"]
+albedo_texture = ExtResource("2_sqpku")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pa2dx"]
+albedo_texture = ExtResource("2_sqpku")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_w8c0p")
+surface_material_override/0 = SubResource("StandardMaterial3D_2ti6k")
+surface_material_override/1 = SubResource("StandardMaterial3D_pa2dx")

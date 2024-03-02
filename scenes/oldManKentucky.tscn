@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://bsg8ldpgu2gtw"]
+
+[ext_resource type="ArrayMesh" uid="uid://ukfbq407jmcp" path="res://models/Pirate.obj" id="1_8pb13"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rrv0g"]
+albedo_color = Color(0.698039, 0.556863, 0.447059, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6hi2k"]
+albedo_color = Color(0.333333, 0.180392, 0.0901961, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0bsfq"]
+albedo_color = Color(0.662745, 0.662745, 0.662745, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_33rcg"]
+albedo_color = Color(0.196078, 0.360784, 0.454902, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aobm0"]
+albedo_color = Color(0.635294, 0.4, 0.32549, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+mesh = ExtResource("1_8pb13")
+surface_material_override/0 = SubResource("StandardMaterial3D_rrv0g")
+surface_material_override/1 = SubResource("StandardMaterial3D_6hi2k")
+surface_material_override/2 = SubResource("StandardMaterial3D_0bsfq")
+surface_material_override/3 = SubResource("StandardMaterial3D_33rcg")
+surface_material_override/4 = SubResource("StandardMaterial3D_aobm0")

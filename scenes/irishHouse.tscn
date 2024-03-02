@@ -1,0 +1,90 @@
+[gd_scene load_steps=16 format=3 uid="uid://ddognp4pjsxp1"]
+
+[ext_resource type="ArrayMesh" uid="uid://bmu33c5n67n6c" path="res://models/irishHouse.obj" id="1_p4dgt"]
+[ext_resource type="Script" path="res://scripts/structureWithPath.gd" id="1_suq33"]
+[ext_resource type="Material" uid="uid://dnilpqgncpehh" path="res://materials/outlineShaderMaterial.tres" id="3_00e0w"]
+[ext_resource type="Material" uid="uid://ocldnrvtwp0f" path="res://materials/grassFloor.tres" id="4_nye4c"]
+[ext_resource type="Shader" path="res://shaders/walls.gdshader" id="4_wguxy"]
+[ext_resource type="Material" uid="uid://caqirrdpj6nlh" path="res://materials/house_wall.tres" id="5_1wxsw"]
+[ext_resource type="PackedScene" uid="uid://bq3rauxjlsbj" path="res://scenes/FactionFlag.tscn" id="7_lu7yp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ttajp"]
+render_priority = 0
+next_pass = ExtResource("3_00e0w")
+shader = ExtResource("4_wguxy")
+shader_parameter/first_color = Color(1, 1, 1, 1)
+shader_parameter/second_color = Color(0, 0, 0, 1)
+shader_parameter/position = 0.267
+shader_parameter/size = 0.649
+shader_parameter/angle = 267.847
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e3x7n"]
+specular_mode = 1
+albedo_color = Color(0.796078, 0.796078, 0.796078, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l267n"]
+specular_mode = 1
+albedo_color = Color(0.0901961, 0.0666667, 0.00784314, 1)
+uv1_scale = Vector3(10, 10, 10)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1w3nl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xm7qc"]
+size = Vector3(0.2, 2, 5.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1cagm"]
+size = Vector3(4.5, 2, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rppjv"]
+size = Vector3(2.7, 2, 0.2)
+
+[sub_resource type="Curve3D" id="Curve3D_haycw"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 1, 0, 0, -2, 0, 0, 2, 0, 0, 2, 0, 6, 0, 0, 0, 0, 0, 0, 4, 0, 0, 6, 0, 0, -4, 0, 0, 0, 0, -5, 0, 0, 0, 0, 0, 0, -4, 0, 0, -2, 0, 0, 4, 0, 0, -2, 0, 6, 0, 0, 0, 0, 0, 0, 1, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 7
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_suq33")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.56, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+mesh = ExtResource("1_p4dgt")
+surface_material_override/0 = SubResource("ShaderMaterial_ttajp")
+surface_material_override/1 = SubResource("StandardMaterial3D_e3x7n")
+surface_material_override/2 = SubResource("StandardMaterial3D_l267n")
+surface_material_override/3 = ExtResource("5_1wxsw")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.16031, 0, 5.10024, 0, 15, 0, -5.10024, 0, 3.16031, 0, 0.0599316, 0)
+mesh = SubResource("PlaneMesh_1w3nl")
+surface_material_override/0 = ExtResource("4_nye4c")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.17613, 0.970628, 0.03862)
+shape = SubResource("BoxShape3D_xm7qc")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25693, 0.970628, 0.03862)
+shape = SubResource("BoxShape3D_xm7qc")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.974949, -2.40229)
+shape = SubResource("BoxShape3D_1cagm")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.902552, 0.940478, 2.60337)
+shape = SubResource("BoxShape3D_rppjv")
+
+[node name="Path3D" type="Path3D" parent="."]
+curve = SubResource("Curve3D_haycw")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(0.986392, 0, 0.164399, 0, 1, 0, -0.164399, 0, 0.986392, 1, 0, 0)
+use_model_front = true
+
+[node name="Flag" parent="." instance=ExtResource("7_lu7yp")]
+transform = Transform3D(0.555, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -2.73589, 0.483582, 0.170521)

@@ -1,0 +1,216 @@
+[gd_scene load_steps=15 format=3 uid="uid://bwva3pn5ikpa8"]
+
+[ext_resource type="Script" path="res://scripts/pine.gd" id="1_5x0nk"]
+[ext_resource type="Material" uid="uid://ocldnrvtwp0f" path="res://materials/grassFloor.tres" id="3_wy30e"]
+[ext_resource type="ArrayMesh" uid="uid://bml4hisn6pwhy" path="res://models/PineCrown.obj" id="4_7hicj"]
+[ext_resource type="Material" uid="uid://dnilpqgncpehh" path="res://materials/outlineShaderMaterial.tres" id="4_huqmn"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_uk83x"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_1awyo"]
+size = Vector3(0.45, 3, 0.45)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6r5h5"]
+albedo_color = Color(0.423529, 0.337255, 0.176471, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jrjc6"]
+next_pass = ExtResource("4_huqmn")
+albedo_color = Color(0.0941176, 0.435294, 0.396078, 1)
+
+[sub_resource type="Animation" id="Animation_6k3gj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D4:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -0.132104)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.06327, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MeshInstance3D3:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MeshInstance3D4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.148159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_sh7kj"]
+resource_name = "Wind"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D4:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667, 0.2, 0.233333, 0.266667, 0.3, 0.333333, 0.366667, 0.4, 0.433333, 0.466667, 0.5, 0.533333, 0.566667, 0.6, 0.633333, 0.666667, 0.7, 0.733333, 0.766667, 0.8, 0.833333, 0.866667, 0.9, 0.933333, 0.966667, 1, 1.03333, 1.06667, 1.1, 1.13333, 1.16667, 1.2, 1.23333, 1.26667, 1.3, 1.33333, 1.36667, 1.4, 1.43333, 1.46667, 1.5, 1.53333, 1.56667, 1.6, 1.63333, 1.66667, 1.7, 1.73333, 1.76667, 1.8, 1.83333, 1.86667, 1.9, 1.93333, 1.96667, 2, 2.03333, 2.06667, 2.1, 2.13333, 2.16667, 2.2, 2.23333, 2.26667, 2.3, 2.33333, 2.36667, 2.4, 2.43333, 2.46667, 2.5, 2.53333, 2.56667, 2.6, 2.63333, 2.66667, 2.7, 2.73333, 2.76667, 2.8, 2.83333, 2.86667, 2.9, 2.93333, 2.96667, 3, 3.03333, 3.06667, 3.1, 3.13333, 3.16667, 3.2, 3.23333, 3.26667, 3.3, 3.33333, 3.36667, 3.4, 3.43333, 3.46667, 3.5, 3.53333, 3.56667, 3.6, 3.63333, 3.66667, 3.7, 3.73333, 3.76667, 3.8, 3.83333, 3.86667, 3.9, 3.93333, 3.96667, 4, 4.03333, 4.06667, 4.1, 4.13333, 4.16667, 4.2, 4.23333, 4.26667, 4.3, 4.33333, 4.36667, 4.4, 4.43333, 4.46667, 4.5, 4.53333, 4.56667, 4.6, 4.63333, 4.66667, 4.7, 4.73333, 4.76667, 4.8, 4.83333, 4.86667, 4.9, 4.93333, 4.96667, 5, 5.03333, 5.06667, 5.1, 5.13333, 5.16667, 5.2, 5.23333, 5.26667, 5.3, 5.33333, 5.36667, 5.4, 5.43333, 5.46667, 5.5, 5.53333, 5.56667, 5.6, 5.63333, 5.66667, 5.7, 5.73333, 5.76667, 5.8, 5.83333, 5.86667, 5.9, 5.93333, 5.96667, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, -0.0279253), Vector3(0, 0, -0.0273047), Vector3(0, 0, -0.0266841), Vector3(0, 0, -0.0260636), Vector3(0, 0, -0.025443), Vector3(0, 0, -0.0248225), Vector3(0, 0, -0.0242019), Vector3(0, 0, -0.0235813), Vector3(0, 0, -0.0229608), Vector3(0, 0, -0.0223402), Vector3(0, 0, -0.0217197), Vector3(0, 0, -0.0210991), Vector3(0, 0, -0.0204785), Vector3(0, 0, -0.019858), Vector3(0, 0, -0.0192374), Vector3(0, 0, -0.0186168), Vector3(0, 0, -0.0179963), Vector3(0, 0, -0.0173757), Vector3(0, 0, -0.0167552), Vector3(0, 0, -0.0161346), Vector3(0, 0, -0.015514), Vector3(0, 0, -0.0148935), Vector3(0, 0, -0.0142729), Vector3(0, 0, -0.0136524), Vector3(0, 0, -0.0130318), Vector3(0, 0, -0.0124112), Vector3(0, 0, -0.0117907), Vector3(0, 0, -0.0111701), Vector3(0, 0, -0.0105495), Vector3(0, 0, -0.00992898), Vector3(0, 0, -0.00930842), Vector3(0, 0, -0.00868786), Vector3(0, 0, -0.0080673), Vector3(0, 0, -0.00744674), Vector3(0, 0, -0.00682618), Vector3(0, 0, -0.00620562), Vector3(0, 0, -0.00558505), Vector3(0, 0, -0.00496449), Vector3(0, 0, -0.00434393), Vector3(0, 0, -0.00372337), Vector3(0, 0, -0.00310281), Vector3(0, 0, -0.00248225), Vector3(0, 0, -0.00186168), Vector3(0, 0, -0.00124113), Vector3(0, 0, -0.000620561), Vector3(0, 0, 0), Vector3(0, 0, 0.000620561), Vector3(0, 0, 0.00124112), Vector3(0, 0, 0.00186169), Vector3(0, 0, 0.00248225), Vector3(0, 0, 0.00310281), Vector3(0, 0, 0.00372337), Vector3(0, 0, 0.00434393), Vector3(0, 0, 0.00496449), Vector3(0, 0, 0.00558505), Vector3(0, 0, 0.00620561), Vector3(0, 0, 0.00682618), Vector3(0, 0, 0.00744674), Vector3(0, 0, 0.0080673), Vector3(0, 0, 0.00868786), Vector3(0, 0, 0.00930842), Vector3(0, 0, 0.00992898), Vector3(0, 0, 0.0105495), Vector3(0, 0, 0.0111701), Vector3(0, 0, 0.0117907), Vector3(0, 0, 0.0124112), Vector3(0, 0, 0.0130318), Vector3(0, 0, 0.0136524), Vector3(0, 0, 0.0142729), Vector3(0, 0, 0.0148935), Vector3(0, 0, 0.015514), Vector3(0, 0, 0.0161346), Vector3(0, 0, 0.0167552), Vector3(0, 0, 0.0173757), Vector3(0, 0, 0.0179963), Vector3(0, 0, 0.0186168), Vector3(0, 0, 0.0192374), Vector3(0, 0, 0.019858), Vector3(0, 0, 0.0204785), Vector3(0, 0, 0.0210991), Vector3(0, 0, 0.0217197), Vector3(0, 0, 0.0223402), Vector3(0, 0, 0.0229608), Vector3(0, 0, 0.0235813), Vector3(0, 0, 0.0242019), Vector3(0, 0, 0.0248225), Vector3(0, 0, 0.025443), Vector3(0, 0, 0.0260636), Vector3(0, 0, 0.0266841), Vector3(0, 0, 0.0273047), Vector3(0, 0, 0.0279253), Vector3(0, 0, 0.0273047), Vector3(0, 0, 0.0266841), Vector3(0, 0, 0.0260636), Vector3(0, 0, 0.025443), Vector3(0, 0, 0.0248225), Vector3(0, 0, 0.0242019), Vector3(0, 0, 0.0235813), Vector3(0, 0, 0.0229608), Vector3(0, 0, 0.0223402), Vector3(0, 0, 0.0217197), Vector3(0, 0, 0.0210991), Vector3(0, 0, 0.0204785), Vector3(0, 0, 0.019858), Vector3(0, 0, 0.0192374), Vector3(0, 0, 0.0186168), Vector3(0, 0, 0.0179963), Vector3(0, 0, 0.0173757), Vector3(0, 0, 0.0167552), Vector3(0, 0, 0.0161346), Vector3(0, 0, 0.015514), Vector3(0, 0, 0.0148935), Vector3(0, 0, 0.0142729), Vector3(0, 0, 0.0136524), Vector3(0, 0, 0.0130318), Vector3(0, 0, 0.0124112), Vector3(0, 0, 0.0117907), Vector3(0, 0, 0.0111701), Vector3(0, 0, 0.0105495), Vector3(0, 0, 0.00992898), Vector3(0, 0, 0.00930842), Vector3(0, 0, 0.00868786), Vector3(0, 0, 0.0080673), Vector3(0, 0, 0.00744674), Vector3(0, 0, 0.00682618), Vector3(0, 0, 0.00620562), Vector3(0, 0, 0.00558505), Vector3(0, 0, 0.00496449), Vector3(0, 0, 0.00434393), Vector3(0, 0, 0.00372337), Vector3(0, 0, 0.00310281), Vector3(0, 0, 0.00248225), Vector3(0, 0, 0.00186168), Vector3(0, 0, 0.00124113), Vector3(0, 0, 0.000620561), Vector3(0, 0, 0), Vector3(0, 0, -0.000620561), Vector3(0, 0, -0.00124112), Vector3(0, 0, -0.00186169), Vector3(0, 0, -0.00248225), Vector3(0, 0, -0.00310281), Vector3(0, 0, -0.00372337), Vector3(0, 0, -0.00434393), Vector3(0, 0, -0.00496449), Vector3(0, 0, -0.00558505), Vector3(0, 0, -0.00620561), Vector3(0, 0, -0.00682618), Vector3(0, 0, -0.00744674), Vector3(0, 0, -0.0080673), Vector3(0, 0, -0.00868786), Vector3(0, 0, -0.00930842), Vector3(0, 0, -0.00992898), Vector3(0, 0, -0.0105495), Vector3(0, 0, -0.0111701), Vector3(0, 0, -0.0117907), Vector3(0, 0, -0.0124112), Vector3(0, 0, -0.0130318), Vector3(0, 0, -0.0136524), Vector3(0, 0, -0.0142729), Vector3(0, 0, -0.0148935), Vector3(0, 0, -0.015514), Vector3(0, 0, -0.0161346), Vector3(0, 0, -0.0167552), Vector3(0, 0, -0.0173757), Vector3(0, 0, -0.0179963), Vector3(0, 0, -0.0186168), Vector3(0, 0, -0.0192374), Vector3(0, 0, -0.019858), Vector3(0, 0, -0.0204785), Vector3(0, 0, -0.0210991), Vector3(0, 0, -0.0217197), Vector3(0, 0, -0.0223402), Vector3(0, 0, -0.0229608), Vector3(0, 0, -0.0235813), Vector3(0, 0, -0.0242019), Vector3(0, 0, -0.0248225), Vector3(0, 0, -0.025443), Vector3(0, 0, -0.0260636), Vector3(0, 0, -0.0266841), Vector3(0, 0, -0.0273047), Vector3(0, 0, -0.0279253)]
+}
+
+[sub_resource type="Animation" id="Animation_5gv5e"]
+resource_name = "fall"
+length = 2.5
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D3")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array()
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D3")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array()
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MeshInstance3D3:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.06327, 0), Vector3(0, 0.273, -1.47), Vector3(0, 0.273, -1.47), Vector3(0, -1.237, -1.47)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MeshInstance3D3:rotation")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-1.5708, 0, 0)]
+}
+tracks/4/type = "position_3d"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MeshInstance3D4")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array()
+tracks/5/type = "rotation_3d"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MeshInstance3D4")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array()
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("MeshInstance3D4:rotation")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, -0.132645), Vector3(-1.5708, 0, -0.132645)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MeshInstance3D4:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -0.148159, 0), Vector3(0, -1.428, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wj06i"]
+_data = {
+"RESET": SubResource("Animation_6k3gj"),
+"Wind": SubResource("Animation_sh7kj"),
+"fall": SubResource("Animation_5gv5e")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dvhqb"]
+size = Vector3(2, 3, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u0r6p"]
+size = Vector3(0.5, 3, 0.5)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_5x0nk")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 5, 0, 0, 0, 2, 0, 0.019319, 0)
+mesh = SubResource("PlaneMesh_uk83x")
+surface_material_override/0 = ExtResource("3_wy30e")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06327, 0)
+mesh = SubResource("BoxMesh_1awyo")
+surface_material_override/0 = SubResource("StandardMaterial3D_6r5h5")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.991287, 0.26344, 0, -0.13172, 1.98257, 0, 0, 0, 1, 0, -0.148159, 0)
+mesh = ExtResource("4_7hicj")
+surface_material_override/0 = SubResource("StandardMaterial3D_jrjc6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wj06i")
+}
+
+[node name="ChoppingArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ChoppingArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.44288, 0)
+shape = SubResource("BoxShape3D_dvhqb")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.48138, 0)
+shape = SubResource("BoxShape3D_u0r6p")

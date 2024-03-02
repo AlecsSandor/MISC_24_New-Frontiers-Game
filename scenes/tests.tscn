@@ -1,0 +1,90 @@
+[gd_scene load_steps=5 format=3 uid="uid://llfm4q7dytd2"]
+
+[ext_resource type="Environment" uid="uid://cu12melhrayn" path="res://world/tests.tres" id="1_ungkt"]
+[ext_resource type="PackedScene" uid="uid://bwva3pn5ikpa8" path="res://scenes/pine2.tscn" id="2_gu7oh"]
+[ext_resource type="PackedScene" uid="uid://bw8fxf38bhoy4" path="res://scenes/mountain.tscn" id="2_ncrl8"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_okcka"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_ungkt")
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="Node3D4" type="Node3D" parent="Node3D"]
+
+[node name="Node3D" parent="Node3D/Node3D4" instance=ExtResource("2_ncrl8")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.0515681, 1.77768, -0.0480235)
+
+[node name="Node3D2" parent="Node3D/Node3D4" instance=ExtResource("2_ncrl8")]
+transform = Transform3D(-0.0275453, 0, 0.0961315, 0, 0.1, 0, -0.0961315, 0, -0.0275453, -0.201076, 1.77768, 0.155693)
+
+[node name="Node3D3" parent="Node3D/Node3D4" instance=ExtResource("2_ncrl8")]
+transform = Transform3D(-0.0435121, 0, -0.0900372, 0, 0.1, 0, 0.0900372, 0, -0.0435121, 0.266626, 1.77768, -0.329488)
+
+[node name="Node3D11" type="Node3D" parent="Node3D"]
+
+[node name="Node3D2" parent="Node3D/Node3D11" instance=ExtResource("2_gu7oh")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 1.01472, 1.77811, -0.0675046)
+
+[node name="Node3D7" parent="Node3D/Node3D11" instance=ExtResource("2_gu7oh")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.793606, 1.77811, 0.219822)
+
+[node name="Node3D8" parent="Node3D/Node3D11" instance=ExtResource("2_gu7oh")]
+transform = Transform3D(0.0266337, 0, 0.0138074, 0, 0.03, 0, -0.0138074, 0, 0.0266337, 0.769978, 1.77933, -0.0539834)
+
+[node name="Node3D9" parent="Node3D/Node3D11" instance=ExtResource("2_gu7oh")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.994424, 1.77811, -0.308896)
+
+[node name="Node3D10" parent="Node3D/Node3D11" instance=ExtResource("2_gu7oh")]
+transform = Transform3D(0.0128566, 0, 0.0483188, 0, 0.05, 0, -0.0483188, 0, 0.0128566, 1.27837, 1.77811, -0.290898)
+
+[node name="Node3D3" parent="Node3D/Node3D11" instance=ExtResource("2_gu7oh")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 1.29834, 1.77811, 0.234491)
+
+[node name="Node3D11" parent="Node3D/Node3D11" instance=ExtResource("2_gu7oh")]
+transform = Transform3D(0.0418382, 0, 0.0273782, 0, 0.05, 0, -0.0273782, 0, 0.0418382, 1.13292, 1.77811, 0.351429)
+
+[node name="Node3D12" parent="Node3D/Node3D11" instance=ExtResource("2_gu7oh")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 1.01761, 1.7781, 0.142875)
+
+[node name="Node3D13" parent="Node3D/Node3D11" instance=ExtResource("2_gu7oh")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 1.21413, 1.77811, -0.0506465)
+
+[node name="Node3D14" parent="Node3D/Node3D11" instance=ExtResource("2_gu7oh")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 1.36521, 1.77811, 0.0456048)
+
+[node name="Node3D2" type="Node3D" parent="Node3D"]
+
+[node name="Node3D" type="Node3D" parent="Node3D/Node3D2"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/Node3D2/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 2.25588, 0, 0, 0, 1, 0.0188934, 0.650508, 0)
+mesh = SubResource("BoxMesh_okcka")
+skeleton = NodePath("../../../..")
+
+[node name="Node3D3" type="Node3D" parent="Node3D/Node3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.00826)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/Node3D2/Node3D3"]
+transform = Transform3D(1, 0, 0, 0, 2.25588, 0, 0, 0, 1, 0.0188934, 0.650508, 0.00727332)
+mesh = SubResource("BoxMesh_okcka")
+skeleton = NodePath("../../../..")
+
+[node name="Node3D5" type="Node3D" parent="Node3D/Node3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01215, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/Node3D2/Node3D5"]
+transform = Transform3D(1, 0, 0, 0, 2.25588, 0, 0, 0, 1, 0.00934339, 0.650508, 0)
+mesh = SubResource("BoxMesh_okcka")
+skeleton = NodePath("../../../..")
+
+[node name="Node3D6" type="Node3D" parent="Node3D/Node3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01215, 0, -1.00826)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/Node3D2/Node3D6"]
+transform = Transform3D(1, 0, 0, 0, 2.25588, 0, 0, 0, 1, 0.00934339, 0.650508, 0.00727332)
+mesh = SubResource("BoxMesh_okcka")
+skeleton = NodePath("../../../..")

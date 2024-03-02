@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://c685u5ft0reui"]
+
+[ext_resource type="Shader" path="res://shaders/wind.gdshader" id="1_kdhfl"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_kdhfl")
+shader_parameter/speed = 0.7
+shader_parameter/dis = 0.5
+shader_parameter/main_color = Color(0.647059, 0.67451, 0.666667, 1)

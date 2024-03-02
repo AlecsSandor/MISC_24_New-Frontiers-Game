@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsgfgd2d3csa3"]
+
+[ext_resource type="PackedScene" uid="uid://brvetijfm2kq2" path="res://models/CloudversCharacterModels_.glb" id="1_ienwj"]
+[ext_resource type="Script" path="res://scripts/Jebediah.gd" id="2_wwfuu"]
+
+[node name="Jebediah" instance=ExtResource("1_ienwj")]
+script = ExtResource("2_wwfuu")
+
+[node name="Skeleton3D" parent="Armature_002" index="0"]
+bones/1/rotation = Quaternion(0.0172458, 0.00191778, 0.0250945, 0.999534)
+bones/2/rotation = Quaternion(-0.0200891, 0.000254168, -0.00532213, 0.999784)
+bones/6/rotation = Quaternion(0.154113, -0.000374398, 0.00389714, 0.988045)
+bones/8/rotation = Quaternion(0.134026, -0.000295223, 0.00390391, 0.99097)
+bones/9/rotation = Quaternion(-1.19703e-07, 1.27933e-07, -0.997798, 0.0663234)
+bones/10/rotation = Quaternion(-0.00357603, -0.139146, -0.0442045, 0.989278)
+bones/11/rotation = Quaternion(0.173945, 0.0994904, -0.0750149, 0.976841)
+bones/12/rotation = Quaternion(-1.2005e-07, -1.28448e-07, 0.998356, 0.0573072)
+bones/13/rotation = Quaternion(-0.0026776, 0.135292, 0.0326566, 0.990264)
+bones/14/rotation = Quaternion(-0.0109196, 0.000186371, 0.04312, 0.99901)

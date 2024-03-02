@@ -1,0 +1,49 @@
+[gd_scene load_steps=11 format=3 uid="uid://divnqq5okov68"]
+
+[ext_resource type="PackedScene" uid="uid://pustr742vw14" path="res://scenes/luca_02.glb" id="1_53wmy"]
+[ext_resource type="Material" uid="uid://dnilpqgncpehh" path="res://materials/outlineShaderMaterial.tres" id="2_rs5gj"]
+[ext_resource type="Material" uid="uid://cw46kkbl0bm48" path="res://materials/Character_hat.tres" id="3_k1850"]
+[ext_resource type="Material" uid="uid://c20ts8rq0q418" path="res://materials/Character_skin.tres" id="3_o4uh1"]
+[ext_resource type="Material" uid="uid://dcwg0tcuj18ii" path="res://materials/Character_hatStrip.tres" id="4_ijl5o"]
+[ext_resource type="Material" uid="uid://d2p7f3n7v2n1f" path="res://materials/Character_pants.tres" id="4_jjqhq"]
+[ext_resource type="Material" uid="uid://cvf21hwsbaww0" path="res://materials/Character_boots.tres" id="5_swnsm"]
+[ext_resource type="Material" uid="uid://csbb5e3pe3egu" path="res://materials/Character_beard.tres" id="8_6xkj3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ctqhd"]
+next_pass = ExtResource("2_rs5gj")
+albedo_color = Color(0.301961, 0.180392, 0.0666667, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tewew"]
+next_pass = ExtResource("2_rs5gj")
+albedo_color = Color(0.360784, 0.380392, 0.380392, 1)
+
+[node name="luca" instance=ExtResource("1_53wmy")]
+
+[node name="Skeleton3D" parent="Luca" index="0"]
+bones/0/position = Vector3(-0.0129634, 1.70999, 0.000196597)
+bones/2/rotation = Quaternion(0.15105, 1.05649e-11, -3.58519e-08, 0.988526)
+bones/4/rotation = Quaternion(0.141057, 0.0188444, -0.445244, 0.884028)
+bones/5/rotation = Quaternion(0.118417, -0.0118816, -0.050347, 0.991616)
+bones/7/rotation = Quaternion(0.313302, 0.398521, 0.346295, 0.789369)
+bones/8/rotation = Quaternion(0.11371, 0.0364339, 0.060247, 0.991016)
+bones/9/position = Vector3(0.508118, -0.241573, -0.0211922)
+bones/9/rotation = Quaternion(-0.697695, -0.0797312, 0.709817, 0.0549968)
+bones/10/rotation = Quaternion(0.0015009, 0.000280134, 0.063256, 0.997996)
+bones/11/rotation = Quaternion(0.0110407, -0.0006188, 0.174714, 0.984557)
+bones/14/position = Vector3(-0.480932, -0.252771, -0.00898095)
+bones/14/rotation = Quaternion(-0.696132, -0.0624836, 0.711544, 0.0721189)
+bones/15/rotation = Quaternion(-0.000946719, 0.00321458, 0.0632667, 0.997991)
+bones/16/rotation = Quaternion(-0.0105833, 0.00321897, 0.174742, 0.984552)
+
+[node name="bas_low" parent="Luca/Skeleton3D" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_ctqhd")
+surface_material_override/1 = SubResource("StandardMaterial3D_tewew")
+
+[node name="LucaaGeo" parent="Luca/Skeleton3D" index="1"]
+surface_material_override/0 = ExtResource("3_k1850")
+surface_material_override/1 = ExtResource("4_ijl5o")
+surface_material_override/2 = ExtResource("3_o4uh1")
+surface_material_override/3 = ExtResource("5_swnsm")
+surface_material_override/4 = ExtResource("4_jjqhq")
+surface_material_override/5 = ExtResource("8_6xkj3")
+surface_material_override/6 = ExtResource("5_swnsm")

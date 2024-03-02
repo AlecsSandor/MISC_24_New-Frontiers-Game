@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://b2ih5orjs6ugb"]
+
+[ext_resource type="Script" path="res://scripts/bullet.gd" id="1_q8ofq"]
+[ext_resource type="Shader" path="res://shaders/walls.gdshader" id="2_jlk8b"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_wtpts"]
+top_radius = 0.2
+bottom_radius = 0.1
+height = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nekyy"]
+render_priority = 0
+shader = ExtResource("2_jlk8b")
+shader_parameter/first_color = Color(1, 1, 1, 1)
+shader_parameter/second_color = Color(0, 0, 0, 1)
+shader_parameter/position = -0.39
+shader_parameter/size = 0.609
+shader_parameter/angle = 93.947
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dwt7h"]
+transparency = 1
+albedo_color = Color(0.784314, 0.784314, 0.784314, 0.568627)
+
+[sub_resource type="BoxMesh" id="BoxMesh_im5xk"]
+material = SubResource("StandardMaterial3D_dwt7h")
+size = Vector3(0.2, 0.2, 0.2)
+
+[node name="Bullet" type="CharacterBody3D"]
+script = ExtResource("1_q8ofq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.713303, 0, 0, 0, -3.44253e-08, -0.715884, 0, 0.787559, -3.12923e-08, 0.0102776, 0.00300038, -0.170658)
+mesh = SubResource("CylinderMesh_wtpts")
+surface_material_override/0 = SubResource("ShaderMaterial_nekyy")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0102776, 0.00300038, 0.166329)
+visible = false
+amount = 50
+lifetime = 0.5
+preprocess = 0.14
+local_coords = true
+mesh = SubResource("BoxMesh_im5xk")
+gravity = Vector3(0, -10, 50)
